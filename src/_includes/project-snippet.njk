@@ -1,0 +1,16 @@
+<li>
+    <article class="snippet">
+        <img src="{{ project.data.image }}" alt="{{ project.data.imageAlt }}" class="snippet__image">
+        <h3 class="snippet__title">
+            <a href="{{ project.url }}">{{ project.data.title }}</a>
+        </h3>
+        <p class="snippet__meta"> Tech: <span>{{ project.data.tech }}</span></p>
+        <p class="snippet__body">
+            {{ project.data.description }}
+        </p>
+        <!-- TODO: ADD buttons side by side 
+        <a href="{{ project.data.live }}" class="btn btn--neutral">GitHub Repository</a>
+        -->
+        <a href="{{ project.data.repo }}" class="btn btn--primary">GitHub Repository</a>
+    </article>
+</li>
