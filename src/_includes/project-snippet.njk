@@ -1,20 +1,9 @@
-<li>
-    <article class="snippet">
-        <img src="{{ project.data.image }}" alt="{{ project.data.imageAlt }}" class="snippet__image">
-        <h3 class="snippet__title">
-            <a href="{{ project.url }}">{{ project.data.title }}</a>
-        </h3>
-        <p class="snippet__meta"> Tech: <span>{{ project.data.tech }}</span></p>
-        <p class="snippet__body">
-            {{ project.data.description }}
-        </p>
-        <div class="flex-group">
-            <a href="{{ project.data.live }}" target="_blank" class="btn btn--primary"
-            >Live View</a
-          >
-            <a href="{{ project.data.repo }}" class="btn btn--neutral"
-            >GitHub Repo</a
-          >
-        </div>
-    </article>
+<li class="post-item">
+    <p class="title">
+        <a href="{{ project.url }}" class="post-link">
+            {{ project.data.title }}
+        </a>
+    </p>
+    <p>{{ project.data.tech }}</p>
+    <p>{{ project.data.description }}</p>
 </li>
