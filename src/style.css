@@ -255,29 +255,8 @@ header .nav li a:hover {
   font-size: 1.65rem;
   padding: 2rem;
   border: 3px solid var(--color-tertiary);
-  border-radius: 3px;
+  
   background-size: 5px 5px;
-  background-image: radial-gradient(
-      circle at top left,
-      var(--color-tertiary) 0 13%,
-      transparent 10%
-    ),
-    radial-gradient(
-      circle at top right,
-      var(--color-tertiary) 0 13%,
-      transparent 10%
-    ),
-    radial-gradient(
-      circle at bottom left,
-      var(--color-tertiary) 0 13%,
-      transparent 10%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      var(--color-tertiary) 0 13%,
-      transparent 10%
-    ),
-    radial-gradient(var(--color-tertiary) 0 26%, transparent 20%);
 }
 .highlighted > div {
   margin-left: auto;
