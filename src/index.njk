@@ -20,67 +20,34 @@ layout: 'base.njk'
 
     </div>
   </section>
+
   <section>
-    <h2 class="medium">Featured Project</h2>
+    <h2 class="medium">Featured Projects</h2>
     <div class="medium">
-      <ol class="highlighted medium" style="counter-reset: start-from 3;">
-        {%- for project in collections.project | reverse -%}
-          {% include "project-snippet.njk" %}
+      <ol class="postlist medium">
+        {%- for project in collections.featured | reverse -%}
+          <li class="post-item">
+            <p>
+              <time class="postlist-date">
+                {{ project.date | postDate }}
+              </time>
+            </p>
+            <p class="title">
+              <a href="{{ project.url }}" class="post-link">
+                {{ project.data.title }}
+              </a>
+            </p>
+            <p>
+              {{ project.data.description }}
+            </p>
+            
+            <button href="{{ project.url }}" class="button-74" role="button">Button 74</button>
+
+          </li>
         {%- endfor -%}
       </ol>
     </div>
     <p class="medium archive">More posts can be found in <a href="/blog" class="link-accent">the archive</a>.</p>
   </section>
-  <section>
-    <h2 class="medium">Recommended posts</h2>
-    <div class="medium">
-      <ol class="postlist medium" style="counter-reset: start-from 3;">
-        {%- for post in collections.featured | reverse -%}
-          {% include "post-snippet.njk" %}
-        {%- endfor -%}
-      </ol>
-    </div>
-    <p class="medium archive">More posts can be found in <a href="/blog" class="link-accent">the archive</a>.</p>
-  </section>
-  <style>
-    .postlist .post-item {
-      border-bottom: 2px solid var(--color-main-text-transparent);
-      padding: 3rem 0 2rem;
-    }
-    .postlist .post-item:first-child {
-      padding: 1.5rem 0 3rem;
-    }
-    .post-item {
-      display: block;
-      list-style-type: none;
-    }
-    .post-item p.title {
-      margin-top: -.75rem;
-      margin-bottom: 0.5rem;
-    }
-    .post-item p.title a {
-      font-family: SpaceGroteskRegular,sans-serif;
-      font-size: 2.25rem;
-      background-color: transparent;
-      line-height: 135%;
-      text-decoration: underline;
-      width: 75%;
-      color: var(--color-main-text);
-      background-image: none;
-    }
-    .post-item p.title a:hover {
-      background-color: transparent;
-      color: var(--color-main-text);
-      text-decoration-color: transparent;
-    }
-    .post-item ul li {
-      list-style-type: none;
-      display: inline-block;
-    }
-    @media screen and (max-width:960px) {
-      .post-item p.title a {
-        font-size: 1.75rem;
-      }
-    }
-  </style>
+
 </main>
