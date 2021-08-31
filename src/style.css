@@ -170,6 +170,7 @@ iframe {
   background-repeat: no-repeat;
   background-position: top center;
 }
+
 .highlighted-text-secondary {
   background-image: linear-gradient(
     transparent 60%,
@@ -274,7 +275,7 @@ header .nav li a:hover {
 .social ul {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   margin-bottom: 0.5rem;
 }
