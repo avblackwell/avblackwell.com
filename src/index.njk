@@ -4,8 +4,7 @@ layout: 'base.njk'
 ---
 <main id="main">
 
-  <h1 class="medium">
-    <span class="highlighted-text-primary">Hi, I'm Alex</span></h1>
+  <h1 class="medium"><span class="highlighted-text-primary">Hi, I'm Alex</span></h1>
 
   <section class="medium home-content">
     <div class="intro">
@@ -21,33 +20,14 @@ layout: 'base.njk'
     </div>
   </section>
 
-  <section>
-    <h2 class="medium">Featured Projects</h2>
+  <h2 class="medium"><span class="highlighted-text-primary">Featured Project</span></h1>
+  <section class="medium highlighted featured">
     <div class="medium">
       <ol class="postlist medium">
-        {%- for project in collections.featured | reverse -%}
-          <li class="post-item">
-            <p>
-              <time class="postlist-date">
-                {{ project.date | postDate }}
-              </time>
-            </p>
-            <p class="title">
-              <a href="{{ project.url }}" class="post-link">
-                {{ project.data.title }}
-              </a>
-            </p>
-            <p>
-              {{ project.data.description }}
-            </p>
-            
-            <button href="{{ project.url }}" class="button-74" role="button">Button 74</button>
-
-          </li>
+        {%- for project in collections.featured %}
+          {% include "project-snippet.njk" %}
         {%- endfor -%}
       </ol>
     </div>
-    <p class="medium archive">More posts can be found in <a href="/blog" class="link-accent">the archive</a>.</p>
   </section>
-
 </main>

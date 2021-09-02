@@ -2,13 +2,15 @@
 title: Projects
 layout: 'base.njk'
 ---
-
-<div class="section container">
-  <h1 class="section-title">Recent projects</h1>
-
-  <ul role="list" class="articles__list flow">
-    {%- for project in collections.project | reverse -%}
-      {% include "project-snippet.njk" %}
-    {%- endfor -%}
-  </ul>
-</div>
+<main id="main">
+<section>
+  <h1 class="medium"><span class="highlighted-text-primary">Projects</span></h1>
+  <div class="medium">
+    <ol class="postlist medium">
+      {%- for project in collections.project %}
+        {% include "project-snippet.njk" %}
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+</main>

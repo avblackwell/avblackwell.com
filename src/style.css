@@ -1,78 +1,4 @@
-@font-face {
-  font-family: SpaceGroteskRegular;
-  font-display: swap;
-  src: url(/styles/fonts/space/SpaceGrotesk-Regular.woff2) format("woff2"),
-    url(/styles/fonts/space/SpaceGrotesk-Regular.ttf) format("ttf");
-}
-@font-face {
-  font-family: SpaceGroteskMedium;
-  font-display: swap;
-  src: url(/styles/fonts/space/SpaceGrotesk-Medium.woff2) format("woff2"),
-    url(/styles/fonts/space/SpaceGrotesk-Medium.ttf) format("ttf");
-}
-@font-face {
-  font-family: SpaceGroteskBold;
-  font-display: swap;
-  src: url(/styles/fonts/space/SpaceGrotesk-Bold.woff2) format("woff2"),
-    url(/styles/fonts/space/SpaceGrotesk-Bold.ttf) format("ttf");
-}
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/styles/fonts/roboto/roboto-v20-latin-regular.eot);
-  src: local("Roboto"), local("Roboto-Regular"),
-    url(/styles/fonts/roboto/roboto-v20-latin-regular.eot?#iefix)
-      format("embedded-opentype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-regular.woff2) format("woff2"),
-    url(/styles/fonts/roboto/roboto-v20-latin-regular.woff) format("woff"),
-    url(/styles/fonts/roboto/roboto-v20-latin-regular.ttf) format("truetype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-regular.svg#Roboto) format("svg");
-}
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/styles/fonts/roboto/roboto-v20-latin-italic.eot);
-  src: local("Roboto Italic"), local("Roboto-Italic"),
-    url(/styles/fonts/roboto/roboto-v20-latin-italic.eot?#iefix)
-      format("embedded-opentype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-italic.woff2) format("woff2"),
-    url(/styles/fonts/roboto/roboto-v20-latin-italic.woff) format("woff"),
-    url(/styles/fonts/roboto/roboto-v20-latin-italic.ttf) format("truetype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-italic.svg#Roboto) format("svg");
-}
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/styles/fonts/roboto/roboto-v20-latin-700.eot);
-  src: local("Roboto Bold"), local("Roboto-Bold"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700.eot?#iefix)
-      format("embedded-opentype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700.woff2) format("woff2"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700.woff) format("woff"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700.ttf) format("truetype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700.svg#Roboto) format("svg");
-}
-@font-face {
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/styles/fonts/roboto/roboto-v20-latin-700italic.eot);
-  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700italic.eot?#iefix)
-      format("embedded-opentype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700italic.woff2) format("woff2"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700italic.woff) format("woff"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700italic.ttf) format("truetype"),
-    url(/styles/fonts/roboto/roboto-v20-latin-700italic.svg#Roboto)
-      format("svg");
-}
+
 :root {
   --color-main-text: #3e3355;
   --color-main-text-transparent: rgba(62, 51, 85, 0.25);
@@ -234,7 +160,7 @@ header .nav li a:hover {
   text-decoration: underline;
 }
 #main {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .medium {
   width: 40rem;
@@ -249,7 +175,15 @@ header .nav li a:hover {
   margin-right: auto;
 }
 
+.home-content {
+  padding-bottom: 1rem;
+  padding-top: .5rem;
+}
 
+.featured {
+  
+  padding-top: .5rem;
+}
 
 .social {
   border-top: 3px solid var(--color-main-text);
@@ -426,14 +360,7 @@ header .nav li a:hover {
   top: 0;
   transition: 0.35s;
 }
-:root[user-color-mode="night"] .cta {
-  --color-cta-bg: #ff9bc5 !important;
-  --color-cta-text: #731f2e !important;
-}
-.cta:before {
-  content: "#";
-  margin-right: 0.25rem;
-}
+
 .cta.external:before {
   content: "↗";
   margin-right: 0.25rem;
@@ -452,38 +379,17 @@ header .nav li a:hover {
     0 5px 0 -2px var(--color-cta-text), 0 7px 0 -3px var(--color-cta-text),
     0 9px 0 -5px var(--color-cta-text), 0 11px 0 -6px var(--color-cta-text);
 }
-a.link-accent {
-  text-decoration: none;
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 3px;
-  border-image: linear-gradient(
-      90deg,
-      var(---color-main-text),
-      var(--color-main-text)
-    )
-    1;
-  position: relative;
-  top: 0;
-  transition: 0.35s;
-}
-a.link-accent:hover {
-  background-color: transparent;
-  color: var(--color-main-text);
-  top: -0.8rem;
-  padding-bottom: 0.3rem;
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 3px;
-  border-image: var(--accent-border) 1;
-}
 
-.postlist .post-item {
+.divide {
   border-bottom: 2px solid var(--color-main-text-transparent);
   padding: 3rem 0 2rem;
 }
+
 .postlist .post-item:first-child {
   padding: 1.5rem 0 3rem;
+}
+.postlist .post-item:last-child {
+  border-bottom: none;
 }
 .post-item {
   display: block;
@@ -492,22 +398,15 @@ a.link-accent:hover {
 .post-item p.title {
   margin-top: -.75rem;
   margin-bottom: 0.5rem;
-}
-.post-item p.title a {
   font-family: SpaceGroteskRegular,sans-serif;
   font-size: 2.25rem;
   background-color: transparent;
   line-height: 135%;
-  text-decoration: underline;
   width: 75%;
   color: var(--color-main-text);
   background-image: none;
 }
-.post-item p.title a:hover {
-  background-color: transparent;
-  color: var(--color-main-text);
-  text-decoration-color: transparent;
-}
+
 .post-item ul li {
   list-style-type: none;
   display: inline-block;
@@ -518,37 +417,3 @@ a.link-accent:hover {
   }
 }
 
-.button-74 {
-  background-color: #fbeee0;
-  border: 2px solid #422800;
-  border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-74:hover {
-  background-color: #fff;
-}
-
-.button-74:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
-  }
-}

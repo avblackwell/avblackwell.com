@@ -1,9 +1,19 @@
-<li class="post-item">
+<li class="post-item divide">
     <p class="title">
-        <a href="{{ project.url }}" class="post-link">
+        
             {{ project.data.title }}
-        </a>
+        
     </p>
-    <p>{{ project.data.tech }}</p>
-    <p>{{ project.data.description }}</p>
+    <p>
+        <small>
+            Tech: {{ project.data.tech }}
+        </small>
+    </p>
+    <p>
+        {{ project.data.description }}
+    </p>
+
+    <a href="{{ project.data.live }}" target="_blank" class="cta">Live View</a>
+    <a href="{{ project.data.repo }}" target="_blank" class="cta">Code Repo</a>
+
 </li>
