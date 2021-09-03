@@ -1,6 +1,5 @@
 ---
 title: Social Blog
-tags: ['project','featured']
 tech: Next.js, Firebase
 repo: https://github.com/avblackwell/social-blog
 live: https://social-blog-nu.vercel.app/
