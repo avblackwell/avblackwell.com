@@ -55,13 +55,13 @@ ul {
 a {
   color: var(--color-main-text);
 }
-a:not(.cta):not(.link-accent):not(.nav-item):not(.post-link):not(.highlighted-text-secondary) {
+a:not(.cta):not(.cta2):not(.link-accent):not(.nav-item):not(.post-link):not(.highlighted-text-secondary) {
   transition: text-decoration 0.35s;
   text-decoration-color: var(--color-main-text);
   text-decoration-thickness: 2.5px;
 }
-a:not(.cta):not(.link-accent):not(.nav-item):not(.post-link):not(.highlighted-text-secondary):hover {
-  text-decoration-color: var(--color-tertiary);
+a:not(.cta):not(.cta2):not(.link-accent):not(.nav-item):not(.post-link):not(.highlighted-text-secondary):hover {
+  text-decoration-color: var(--color-main-text);
 }
 h2,
 h3,
@@ -123,7 +123,7 @@ iframe {
   padding-top: 1rem;
 }
 .main-header h1 {
-  font-family: SpaceGroteskBold, Roboto, sans-serif;
+  font-family: 'Red Hat Display', Helvetica, sans-serif;
   line-height: 120%;
   font-size: 1.65rem;
 }
@@ -193,6 +193,7 @@ header .nav li a:hover::before {
   border-top: 3px solid var(--color-main-text);
   border-bottom: 3px solid var(--color-main-text);
   padding: 0.5rem 1rem 0 1rem;
+  text-decoration: none;
 }
 .social ul {
   list-style-type: none;
@@ -202,15 +203,20 @@ header .nav li a:hover::before {
   margin-bottom: 0.5rem;
 }
 .social ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: SpaceGroteskRegular, Roboto, sans-serif;
-  font-weight: 700;
-  transition: background 0.35s !important;
-  background-size: 60% 100%;
+  text-decoration: none !important;
 }
-.social ul li a:hover {
-  background-size: 100% 100%;
+
+.social ul li a span{
+  font-family: 'Red Hat Text', Helvetica, sans-serif;
+  font-weight: 700;
+  background-image: linear-gradient(transparent calc(65% - 5px), var(--color-selection-bg) 5px);
+  background-size: 0;
+  background-repeat: no-repeat;
+  display: inline;
+  transition: 0.5s ease;
+}
+.social ul li a:hover span{
+  background-size: 100%;
 }
 
 .credits {
@@ -342,11 +348,11 @@ header .nav li a:hover::before {
   padding: 0.25rem 0.75rem;
   margin: 1rem 0.5rem 0 0;
   font-size: 1rem;
-  font-family: SpaceGroteskRegular, sans-serif;
+  font-family: 'Red Hat Text', Helvetica, sans-serif;
   line-height: 130%;
-  background-color: var(--color-cta-bg);
-  border: 2px solid var(--color-cta-text);
-  color: var(--color-cta-text);
+  background-color: var(--color-selection-bg);
+  border: 2px solid var(--color-main-text);
+  color: var(--color-main-text);
   border-radius: 1rem;
   text-decoration: none;
   position: relative;
@@ -361,16 +367,16 @@ header .nav li a:hover::before {
 }
 .cta:hover {
   top: 0.25rem;
-  box-shadow: 0 -1px 0 var(--color-cta-text),
-    0 -3px 0 -1px var(--color-cta-text), 0 -5px 0 -2px var(--color-cta-text),
-    0 -7px 0 -3px var(--color-cta-text), 0 -9px 0 -5px var(--color-cta-text),
-    0 -11px 0 -6px var(--color-cta-text);
+  box-shadow: 0 -1px 0 var(--color-main-text),
+    0 -3px 0 -1px var(--color-main-text), 0 -5px 0 -2px var(--color-main-text),
+    0 -7px 0 -3px var(--color-main-text), 0 -9px 0 -5px var(--color-main-text),
+    0 -11px 0 -6px var(--color-main-text);
 }
 .cta.external:hover {
   top: -0.25rem;
-  box-shadow: 0 1px 0 var(--color-cta-text), 0 3px 0 -1px var(--color-cta-text),
-    0 5px 0 -2px var(--color-cta-text), 0 7px 0 -3px var(--color-cta-text),
-    0 9px 0 -5px var(--color-cta-text), 0 11px 0 -6px var(--color-cta-text);
+  box-shadow: 0 1px 0 var(--color-main-text), 0 3px 0 -1px var(--color-main-text),
+    0 5px 0 -2px var(--color-main-text), 0 7px 0 -3px var(--color-main-text),
+    0 9px 0 -5px var(--color-main-text), 0 11px 0 -6px var(--color-main-text);
 }
 
 .cta2 {
@@ -378,11 +384,11 @@ header .nav li a:hover::before {
   padding: 0.25rem 0.75rem;
   margin: 1rem 0.5rem 0 0;
   font-size: 1rem;
-  font-family: SpaceGroteskRegular, sans-serif;
+  font-family: 'Red Hat Text', Helvetica, sans-serif;
   line-height: 130%;
   background-color: var(--color-main-bg);
-  border: 2px solid var(--color-cta-text);
-  color: var(--color-cta-text);
+  border: 2px solid var(--color-main-text);
+  color: var(--color-main-text);
   border-radius: 1rem;
   text-decoration: none;
   position: relative;
@@ -397,16 +403,16 @@ header .nav li a:hover::before {
 }
 .cta2:hover {
   top: 0.25rem;
-  box-shadow: 0 -1px 0 var(--color-cta-text),
-    0 -3px 0 -1px var(--color-cta-text), 0 -5px 0 -2px var(--color-cta-text),
-    0 -7px 0 -3px var(--color-cta-text), 0 -9px 0 -5px var(--color-cta-text),
-    0 -11px 0 -6px var(--color-cta-text);
+  box-shadow: 0 -1px 0 var(--color-main-text),
+    0 -3px 0 -1px var(--color-main-text), 0 -5px 0 -2px var(--color-main-text),
+    0 -7px 0 -3px var(--color-main-text), 0 -9px 0 -5px var(--color-main-text),
+    0 -11px 0 -6px var(--color-main-text);
 }
 .cta2.external:hover {
   top: -0.25rem;
-  box-shadow: 0 1px 0 var(--color-cta-text), 0 3px 0 -1px var(--color-cta-text),
-    0 5px 0 -2px var(--color-cta-text), 0 7px 0 -3px var(--color-cta-text),
-    0 9px 0 -5px var(--color-cta-text), 0 11px 0 -6px var(--color-cta-text);
+  box-shadow: 0 1px 0 var(--color-main-text), 0 3px 0 -1px var(--color-main-text),
+    0 5px 0 -2px var(--color-main-text), 0 7px 0 -3px var(--color-main-text),
+    0 9px 0 -5px var(--color-main-text), 0 11px 0 -6px var(--color-main-text);
 }
 
 
@@ -428,7 +434,7 @@ header .nav li a:hover::before {
 .post-item p.title {
   margin-top: -.75rem;
   margin-bottom: 0.5rem;
-  font-family: SpaceGroteskRegular,sans-serif;
+  font-family: 'Red Hat Text', Helvetica, sans-serif;
   font-size: 2.25rem;
   background-color: transparent;
   line-height: 135%;
