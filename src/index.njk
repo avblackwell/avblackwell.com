@@ -1,17 +1,19 @@
----
-title: About
-layout: 'base.njk'
----
-<main id="main">
+{% extends "layouts/base.njk" %}
 
-  <h1 class="medium"><span class="highlighted-text-primary">Hi, I'm Alex</span></h1>
+{% set title = "Alexander Blackwell" %}
+{% set author = "Alexander Blackwell" %}
+{% set description = "Alexander Blackwell is a software designer working remotely from Bloomington, Indiana." %}
+{% set keywords = "design, software, product, bloomington, indiana, technology, javascript" %}
 
-  <section class="medium home-content">
-    <div class="intro">
-      <p>I'm a multidisciplinary developer and designer, passionate about ethics and accessibility.</p>
-      <p>I recently graduated from Indiana University with a B.S. degree in Informatics and a specialization in human-centered computing.</p>
-      <p>My favorite projects are those where I get to work at the intersection of different disciplines, and combine my design, development, and product management skills to solve complex problems - all while keeping a focus on accessibility, ethics and user experience.</p>
-      <p>I'm currently working from Indy as an independent developer and designer. Available for freelance opportunities at <a href="mailto:alexvblackwell@gmail.com">alexvblackwell@gmail.com</a>.</p>
-    </div>
-  </section>
-</main>
+{% set og_title = "Alexander Blackwell" %}
+{% set og_description = "Alexander Blackwell is a designer / developer working remotely from Bloomington, Indiana." %}
+{% set og_url = "https://www.jonathontoon.com/" %}
+{% set og_image = "images/og-image.png" %}
+
+{% set twitter_site = "@alexvblackwell" %}
+
+{% block content %}
+	<main>
+		{% include "partials/info.njk" %}
+	</main>
+{% endblock %} 
