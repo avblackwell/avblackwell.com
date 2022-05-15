@@ -80,7 +80,7 @@ a {
 
 main {
     position: relative;
-    margin: 2rem;
+    margin: 2rem 2rem;
     margin-top: 3rem;
     height: 100%;
 }
@@ -98,11 +98,6 @@ footer {
     font-size: 0.75rem;
     margin-bottom: 4rem;
 }
-
-
-
-
-
 
 #projects ul li {
     margin-bottom: 1.5rem;
