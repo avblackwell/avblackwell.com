@@ -85,6 +85,25 @@ main {
     height: 100%;
 }
 
+img {
+    width: auto;
+    height: 200px;
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
 canvas {
     display: none;
 }
@@ -97,6 +116,7 @@ article {
 footer {
     font-size: 0.75rem;
     margin-bottom: 4rem;
+    padding: .5rem;
 }
 
 #projects ul li {
