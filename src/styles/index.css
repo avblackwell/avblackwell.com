@@ -90,7 +90,7 @@ img {
     height: 200px;
 }
 
-.rotate {
+/* .rotate {
     animation: rotation 8s infinite linear;
 }
 
@@ -102,7 +102,7 @@ img {
     to {
         transform: rotate(359deg);
     }
-}
+} */
 
 canvas {
     display: none;
